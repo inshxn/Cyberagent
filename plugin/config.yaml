@@ -1,0 +1,18 @@
+database_path: data/logs.db
+modules:
+  signature: true
+  behavior: true
+  anomaly: true
+thresholds:
+  requests_per_second: 8
+  requests_per_minute: 120
+  brute_force_failures: 5
+  max_payload_bytes: 32768
+  anomaly_warmup_samples: 15
+  anomaly_z_threshold: 3.0
+response:
+  throttle_delay_ms: 650
+  ban_seconds: 300
+logging:
+  log_allowed_requests: false
+
